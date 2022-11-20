@@ -1,0 +1,27 @@
+start
+V b_b_b_b;
+V theboy;
+b_b_b_b = 90_L;
+I (b_b_b_b $ 12_L){
+theboy = 5_S;
+theboy = 5_S;
+theboy = 5_S;
+theboy = 5_S;
+} 
+E {
+    b_b_b_b = 12_L + 2_L;
+
+}
+W (b_b_b_b ! 12_L){
+theboy = 5_S;
+theboy = 5_S;
+theboy = 5_S + 2_S;
+theboy = 5_S;
+I (b_b_b_b $ 12_L){
+theboy = 5_S;
+theboy = 5_S;
+theboy = 5_S;
+theboy = 5_S;
+} 
+}
+end

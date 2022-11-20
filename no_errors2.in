@@ -1,0 +1,20 @@
+start
+V theboy;
+theboy = 12_X;
+W (the_boy ! 10_X){
+    theboy = (theboy - 1_X) / (2_X + theboy); 
+}
+V b_b_b_b;
+b_b_b_b = 90_L;
+I (b_b_b_b $ 12_L){
+    b_b_b_b = 90_L;
+    b_b_b_b = 90_L;
+    b_b_b_b = 90_L + 20_L;
+} E {
+    b_b_b_b = 12_L / (5_L - 3_L);
+    b_b_b_b = 80_L;
+    V ask_me;
+    ask_me = 2_L;
+    b_b_b_b = ask_me;
+}
+end

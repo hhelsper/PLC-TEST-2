@@ -1,0 +1,9 @@
+V ;
+theboy = 12_X; ;
+W (! 10_X){
+    theboy = (theboy - 1_X) / (2_X + theboy); 
+}
+b_b_b_b;
+b_b_b_b = 90_L; ;
+
+end
