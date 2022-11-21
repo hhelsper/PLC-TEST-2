@@ -50,10 +50,10 @@ Different int sizes regex:\
 `<bfactor> —> id | int_lit | bool_lit | (  <bexpr> )`
 
 ## c.
-Pass PDT:
-FIRST(prog) = {start}
-FIRST(stmt_list) = {I, W, id, {, V}
-FIRST(expression) = {id, int_lit, ( }
+Pass PDT:\
+FIRST(prog) = {start}\
+FIRST(stmt_list) = {I, W, id, {, V}\
+FIRST(expression) = {id, int_lit, ( }\
 FIRST(bool_exp) = {id, int_lit, bool_lit, ( } 
 
 /* excluding non-terminals that are covered in the recursion down the statements */
