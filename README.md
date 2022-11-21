@@ -47,7 +47,7 @@ Different int sizes regex:
 `<brel> —> <bexpr> { ( @ | # | < | > ) <bexpr> }`\
 `<bexpr> —> <bterm>  {  ( * | / | % ) <bterm> }`\
 `<bterm> —> <bfactor> { ( + | - ) <bfactor> }`\
-`<bfactor> —> id | int_lit | bool_lit | (  <bexpr> )`\
+`<bfactor> —> id | int_lit | bool_lit | (  <bexpr> )`
 
 ## c.
 Pass PDT:
