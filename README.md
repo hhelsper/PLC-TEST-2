@@ -1,32 +1,32 @@
 # PLC-TEST-2
 
 ## a.
-Addition regex: +
-Subtraction regex: -
-Multiplication regex: *
-Division regex: /
-Modulus regex: %
-Less than regex: <
-Greater than regex: >
-Less than or equal to regex: @
-Greater than or equal to regex: #
-Equal to regex: $
-Not equal to regex: ! 
-Assignment regex: =
-Break precedence start regex: (
-Break precedence end regex: )
-Variable names regex: [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_]? [a-z_]?
+Addition regex: +\
+Subtraction regex: -\
+Multiplication regex: *\
+Division regex: /\
+Modulus regex: %\
+Less than regex: <\
+Greater than regex: >\
+Less than or equal to regex: @\
+Greater than or equal to regex: #\
+Equal to regex: $\
+Not equal to regex: ! \
+Assignment regex: =\
+Break precedence start regex: (\
+Break precedence end regex: )\
+Variable names regex: [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_]? [a-z_]?\
 
-Variable type regex: V
-If statement regex: I
-Else statement regex: E
-While statement regex: W
+Variable type regex: V\
+If statement regex: I\
+Else statement regex: E\
+While statement regex: W\
 
 
-Different int sizes regex:
-1 byte: [0-9]+_X
-2 byte: [0-9]+_S
-4 byte: [0-9]+_M
+Different int sizes regex:\
+1 byte: [0-9]+_X\
+2 byte: [0-9]+_S\
+4 byte: [0-9]+_M\
 8 byte: [0-9]+_L
 
 ## b.
