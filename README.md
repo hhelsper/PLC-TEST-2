@@ -96,9 +96,9 @@ Ambiguous: There can only be one path for my production rules. For example, the 
 `hayesh = 12;` (12 is missing suffix for byte, short, int, or long)\
 `V i_d_i;` (i_d_i is only 5 characters/underscores so it is too short to be a variable identifier)\
 `V HayesH;` (HayesH cannot be variable identifier because it has capital letters. Only lowercase letters are allowed for variable names)\
-`P [ THEBOY ! 12_X ] {` (P is not a keyword, and \[ and ] are not symbols in the language)\
+`P [ THEBOY ! 12_X ] {` (P is not a keyword, and \[ and ] are not symbols in the language)
     
-`}` (correct)
+`}` (correct)\
 `endd` (endd is too short to be a variable name and not a keyword, should be end)
 
 ### Syntax errors file 1 terminal output:
