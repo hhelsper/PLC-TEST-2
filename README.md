@@ -31,23 +31,23 @@ Different int sizes regex:
 
 ## b.
 
-<prog> —> start <stmt_list> stop
-<stmt_list> { <stmt> ; }
-<stmt> —> <if_stmt> | <while_stmt> | <assignment> | <block> | <declare>
-<declare> —> V id ;
-<block> —> {  <stmt_list>  }
-<if_stmt> —> I  (  <bool_exp>  )  <block> [ E <block> ]
-<while_stmt> —> W  (  <bool_exp>  )  <block>
-<assignment> —> id = <expression> ;
-<expression> —> <term> { (  *  | /  | % ) <term> }
-<term> —> <factor> { ( + | - ) <factor> }
-<factor> —>   id  | int_lit  | ( <expression> )
-
-<bool_exp> —> <brel> { ( ! | $ ) <brel> }
-<brel> —> <bexpr> { ( @ | # | < | > ) <bexpr> }
-<bexpr> —> <bterm>  {  ( * | / | % ) <bterm> }
-<bterm> —> <bfactor> { ( + | - ) <bfactor> }
-<bfactor> —> id | int_lit | bool_lit | (  <bexpr> ) 
+`<prog> —> start <stmt_list> stop \n
+<stmt_list> { <stmt> ; } \n
+<stmt> —> <if_stmt> | <while_stmt> | <assignment> | <block> | <declare> \n
+<declare> —> V id ;\n
+<block> —> {  <stmt_list>  }\n
+<if_stmt> —> I  (  <bool_exp>  )  <block> [ E <block> ]\n
+<while_stmt> —> W  (  <bool_exp>  )  <block>\n
+<assignment> —> id = <expression> ;\n
+<expression> —> <term> { (  *  | /  | % ) <term> }\n
+<term> —> <factor> { ( + | - ) <factor> }\n
+<factor> —>   id  | int_lit  | ( <expression> )\n
+\n
+<bool_exp> —> <brel> { ( ! | $ ) <brel> }\n
+<brel> —> <bexpr> { ( @ | # | < | > ) <bexpr> }\n
+<bexpr> —> <bterm>  {  ( * | / | % ) <bterm> }\n
+<bterm> —> <bfactor> { ( + | - ) <bfactor> }\n
+<bfactor> —> id | int_lit | bool_lit | (  <bexpr> )\n `
 
 ## c.
 Pass PDT:
