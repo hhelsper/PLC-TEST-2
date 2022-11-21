@@ -197,12 +197,12 @@ BFACTOR -> ( BEXP )
 ![Screenshot](first_table.png)
 
 ### Code sample 1:
-(this code works)
+(this code works)\
 ![Screenshot](input1.png)
 ![Screenshot](steps1.png)
 
 ### Code sample 2:
-(this code works)
+(this code works)\
 ![Screenshot](input2.png)
 ![Screenshot](steps2.png)
 
