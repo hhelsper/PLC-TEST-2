@@ -75,15 +75,15 @@ Ambiguous: There can only be one path for my production rules. For example, the 
 
 #### Lexical errors file 1 contents and explanation:
 
-start (correct)\
-V hayesh; (correct)\
-hayesh = 12; (12 is not in language. Must be followed by suffix for byte, short, int, or long)\
-V i_d_i; (i_d_i is too short to be an identifier, must be between 6-8 characters/underscores)\
-V HayesH; (HayesH is not a valid identifier. it has capital letters which are not allowed to be present in variable identifiers)\
-IP (i_d_i_d_d ^ 12_X){ (IP is not a keyword in language, the keyword should be I for if statement, and ^ is not a operator symbol in the language )\
-    i_d_i_d = 12_H + 13_H; (12_H and 13_H are not valid numbers because suffixes are not matching those defined for byte, short, int and long)\
-} (correct)\
-en (en is not a keyword and it is too short to be a variable identifier. The keyword for end of file is end)
+`start` (correct)\
+`V hayesh;` (correct)\
+`hayesh = 12;` (12 is not in language. Must be followed by suffix for byte, short, int, or long)\
+`V i_d_i;` (i_d_i is too short to be an identifier, must be between 6-8 characters/underscores)\
+`V HayesH;` (HayesH is not a valid identifier. it has capital letters which are not allowed to be present in variable identifiers)\
+`IP (i_d_i_d_d ^ 12_X){` (IP is not a keyword in language, the keyword should be I for if statement, and ^ is not a operator symbol in the language )\
+    `i_d_i_d = 12_H + 13_H;` (12_H and 13_H are not valid numbers because suffixes are not matching those defined for byte, short, int and long)\
+`}` (correct)\
+`en` (en is not a keyword and it is too short to be a variable identifier. The keyword for end of file is end)
 
 ### Lexical errors file 2 terminal output:
 ![Screenshot](lexical_error2_terminal.png)
