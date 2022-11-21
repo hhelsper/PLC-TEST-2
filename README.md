@@ -141,4 +141,91 @@ Ambiguous: There can only be one path for my production rules. For example, the 
 ![Screenshot](no_errors2_terminal1.png)
 ![Screenshot](no_errors2_terminal2.png)
 
+## h.
+
+The go-to rules are too long to take screenshots of. No matter how far I zoom out my screen, it is still impossible to capture them, so take the rules below and paste them into the LR(1) generator to see the full list of go-to rules.
+
+### RULES:
+S' -> start STMT_LIST stop\
+STMT_LIST -> STMT \
+STMT -> IF_STMT\
+STMT -> WHILE_STMT\
+STMT -> ASS\
+STMT -> BLOCK\
+STMT -> DEC\
+DEC -> v id ;\
+BLOCK -> { STMT_LIST }\
+IF_STMT -> i ( BOOL_EXP ) BLOCK\
+IF_STMT -> i ( BOOL_EXP ) BLOCK e BLOCK \
+WHILE_STMT -> w ( BOOL_EXP ) BLOCK\
+ASS -> id = EXP ;\
+EXP -> TERM\
+EXP -> TERM * TERM\
+EXP -> TERM / TERM\
+EXP -> TERM % TERM\
+TERM -> FACTOR\
+TERM -> FACTOR + FACTOR\
+TERM -> FACTOR - FACTOR
+FACTOR -> id\
+FACTOR -> int_lit\
+FACTOR -> ( EXP )\
+BOOL_EXP -> BEXP ! BEXP\
+BOOL_EXP -> BEXP $ BEXP\
+BOOL_EXP -> BEXP @ BEXP\
+BOOL_EXP -> BEXP # BEXP\
+BOOL_EXP -> BEXP < BEXP\
+BOOL_EXP -> BEXP > BEXP\
+BEXP -> BTERM\
+BEXP -> BTERM * BTERM\
+BEXP -> BTERM / BTERM\
+BEXP -> BTERM % BTERM\
+BTERM -> BFACTOR\
+BTERM -> BFACTOR + BFACTOR\
+BTERM -> BFACTOR - BFACTOR\
+BFACTOR -> id\
+BFACTOR -> int_lit\
+BFACTOR -> bool_lit\
+BFACTOR -> ( BEXP )
+
+### LR TABLE:
+![Screenshot](table1.png)
+![Screenshot](table2.png)
+![Screenshot](table3.png)
+![Screenshot](table4.png)
+
+### FIRST TABLE:
+![Screenshot](first_table.png)
+
+### Code sample 1:
+(this code works)
+![Screenshot](input1.png)
+![Screenshot](steps1.png)
+
+### Code sample 2:
+(this code works)
+![Screenshot](input2.png)
+![Screenshot](steps2.png)
+
+
+### Code sample 3:
+(this code has an error)
+
+
+#### Explanation:
+This code breaks because there is an extra closing parenthesis after “int_lit” that never was opened with an opening parenthesis, which should have come after w ( . So for the code to work it should have been “w ( ( id > int_lit ) )”
+It breaks on step 72, because there is no rule or path to go from a closing parenthesis at step 72 so it fails there.
+
+![Screenshot](input_error1.png)
+![Screenshot](steps_error1.png)
+
+### Code sample 4:
+(this code has an error)
+
+
+#### Explanation:
+This code breaks the same way as the above code in that there is a closing parenthesis in the if statement that was never opened before the bool expression begins. This code breaks on step/path 53 because at 53 there is no rule or path to follow if the next character is a closing parenthesis. To correct the code block it should have been “i ( ( id > int_lit + int_lit ) )”
+
+![Screenshot](input_error2.png)
+![Screenshot](steps_error2.png)
+
 
