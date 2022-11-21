@@ -15,7 +15,7 @@ Not equal to regex: ! \
 Assignment regex: =\
 Break precedence start regex: (\
 Break precedence end regex: )\
-Variable names regex: [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_]? [a-z_]?\
+Variable names regex: [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_]? [a-z_]?
 
 Variable type regex: V\
 If statement regex: I\
