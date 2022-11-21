@@ -104,8 +104,34 @@ Ambiguous: There can only be one path for my production rules. For example, the 
 ### Syntax errors file 1 terminal output:
 ![Screenshot](syntax_errors1_terminal.png)
 
+#### Syntax errors file 1 contents and explanation:
+
+(missing keyword start to start program)\
+`b_b_b_b;` (missing V for variable declaration)\
+`b_b_b_b = 90_L` (missing semicolon)\
+`W ()` (missing identifier right after open paren)\
+(missing boolean operator after identifier)\
+(missing arithemetic expression after boolean operator)\
+(missing opening brace for start of codeblock)\
+`}` (correct)
+(missing keyword to end program)
+
 ### Syntax errors file 2 terminal output:
 ![Screenshot](syntax_errors2_terminal.png)
+
+#### Syntax errors file 2 contents and explanation:
+(missing keyword start to start program)\
+`V ;`
+`theboy = 12_X; ;` (missing V for variable declaration)\
+(missing variable name for variable declaration)\
+`W (! 10_X){` (missing identifier that should come after first open paren)\
+    `theboy = (theboy - 1_X) / (2_X + theboy);` (correct)\
+`}` (correct)\
+`b_b_b_b;` (missing keyword V for variable declaration)\
+`b_b_b_b = 90_L; ;` (extra semicolon)\
+(missing V keyword for variable declaration)\
+(missing variable name for variable declaration)\
+`end` (correct)
 
 ### No errors file 1 terminal output:
 ![Screenshot](no_errors1_terminal_top.png)
