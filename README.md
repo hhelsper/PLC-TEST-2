@@ -20,7 +20,7 @@ Variable names regex: [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_] [a-z_]? [a-z_]?
 Variable type regex: V\
 If statement regex: I\
 Else statement regex: E\
-While statement regex: W\
+While statement regex: W
 
 
 Different int sizes regex:\
